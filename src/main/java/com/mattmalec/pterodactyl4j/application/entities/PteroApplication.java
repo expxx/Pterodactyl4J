@@ -77,6 +77,22 @@ public interface PteroApplication {
 	}
 
 	/**
+	 * Retrieves an individual ApplicationUser represented by the provided External ID from Pterodactyl instance
+	 * <br>This requires an <b>Application API key</b> with the <b>Users</b> permission with <b>Read</b> access.
+	 *
+	 * @param  id
+	 *         The user External ID
+	 *
+	 * @throws com.mattmalec.pterodactyl4j.exceptions.LoginException
+	 *         If the API key is incorrect or doesn't have the required permissions
+	 *
+	 * @throws com.mattmalec.pterodactyl4j.exceptions.NotFoundException
+	 * 		   If the user cannot be found
+	 *
+	 * @return {@link com.mattmalec.pterodactyl4j.PteroAction PteroAction} - Type {@link com.mattmalec.pterodactyl4j.application.entities.ApplicationUser ApplicationUsers}
+	 */
+	PteroAction<ApplicationUser> retrieveUserByExternalId(String id);
+	/**
 	 * Retrieves ApplicationUsers matching the provided username from Pterodactyl instance
 	 * <br>This requires an <b>Application API key</b> with the <b>Users</b> permission with <b>Read</b> access.
 	 *
@@ -539,6 +555,20 @@ public interface PteroApplication {
 	}
 
 	/**
+	 * Retrieves ApplicationServers matching the provided External ID from Pterodactyl instance
+	 * <br>This requires an <b>Application API key</b> with the <b>Servers</b> permission with <b>Read</b> access.
+	 *
+	 * @param  id
+	 *         The External ID
+	 *
+	 * @throws com.mattmalec.pterodactyl4j.exceptions.LoginException
+	 *         If the API key is incorrect or doesn't have the required permissions
+	 *
+	 * @return {@link com.mattmalec.pterodactyl4j.PteroAction PteroAction} - Type {@link java.util.List List} of {@link com.mattmalec.pterodactyl4j.application.entities.ApplicationServer ApplicationServers}
+	 */
+	PteroAction<ApplicationServer> retrieveServerByExternalId(String id);
+
+	/**
 	 * Retrieves ApplicationServers matching the provided name from Pterodactyl instance
 	 * <br>This requires an <b>Application API key</b> with the <b>Servers</b> permission with <b>Read</b> access.
 	 *
@@ -553,7 +583,6 @@ public interface PteroApplication {
 	 * @return {@link com.mattmalec.pterodactyl4j.PteroAction PteroAction} - Type {@link java.util.List List} of {@link com.mattmalec.pterodactyl4j.application.entities.ApplicationServer ApplicationServers}
 	 */
 
-	PteroAction<ApplicationServer> retrieveServerByExternalId(String id);
 
 	PteroAction<List<ApplicationServer>> retrieveServersByName(String name, boolean caseSensitive);
 
