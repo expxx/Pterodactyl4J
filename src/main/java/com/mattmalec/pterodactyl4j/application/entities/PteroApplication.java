@@ -565,7 +565,7 @@ public interface PteroApplication {
 	 *         If the API key is incorrect or doesn't have the required permissions
 	 *
 	 * @throws com.mattmalec.pterodactyl4j.exceptions.NotFoundException
-	 * 		   If the server cannot be found
+	 *         If the server cannot be found
 	 *
 	 * @return {@link com.mattmalec.pterodactyl4j.PteroAction PteroAction} - Type {@link com.mattmalec.pterodactyl4j.application.entities.ApplicationServer ApplicationServer}
 	 */
