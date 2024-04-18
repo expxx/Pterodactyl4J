@@ -89,7 +89,7 @@ public interface PteroApplication {
 	 * @throws com.mattmalec.pterodactyl4j.exceptions.NotFoundException
 	 * 		   If the user cannot be found
 	 *
-	 * @return {@link com.mattmalec.pterodactyl4j.PteroAction PteroAction} - Type {@link com.mattmalec.pterodactyl4j.application.entities.ApplicationUser ApplicationUsers}
+	 * @return {@link com.mattmalec.pterodactyl4j.PteroAction PteroAction} - Type {@link com.mattmalec.pterodactyl4j.application.entities.ApplicationUser ApplicationUser}
 	 */
 	PteroAction<ApplicationUser> retrieveUserByExternalId(String id);
 	/**
