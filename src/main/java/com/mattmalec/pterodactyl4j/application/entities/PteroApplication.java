@@ -87,7 +87,7 @@ public interface PteroApplication {
 	 *         If the API key is incorrect or doesn't have the required permissions
 	 *
 	 * @throws com.mattmalec.pterodactyl4j.exceptions.NotFoundException
-	 * 		   If the user cannot be found
+	 *         If the user cannot be found
 	 *
 	 * @return {@link com.mattmalec.pterodactyl4j.PteroAction PteroAction} - Type {@link com.mattmalec.pterodactyl4j.application.entities.ApplicationUser ApplicationUser}
 	 */
