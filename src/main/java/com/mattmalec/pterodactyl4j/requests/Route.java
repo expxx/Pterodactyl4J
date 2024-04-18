@@ -75,7 +75,7 @@ public class Route {
 				APPLICATION_PREFIX
 						+ "servers/{server_id}?include=allocations,user,subusers,nest,egg,location,node,databases");
 		public static final Route GET_SERVER_EXTERNAL =
-				new Route(GET, APPLICATION_PREFIX + "servers/external/{external_id}" );
+				new Route(GET, APPLICATION_PREFIX + "servers/external/{external_id}?include=allocations,user,subusers,nest,egg,location,node,databases" );
 		public static final Route UPDATE_SERVER_DETAILS =
 				new Route(PATCH, APPLICATION_PREFIX + "servers/{server_id}/details");
 		public static final Route UPDATE_SERVER_BUILD =
