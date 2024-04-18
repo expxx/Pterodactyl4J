@@ -559,7 +559,7 @@ public interface PteroApplication {
 	 * <br>This requires an <b>Application API key</b> with the <b>Servers</b> permission with <b>Read</b> access.
 	 *
 	 * @param  id
-	 *         The id
+	 *         The server's external ID
 	 *
 	 * @throws com.mattmalec.pterodactyl4j.exceptions.LoginException
 	 *         If the API key is incorrect or doesn't have the required permissions
