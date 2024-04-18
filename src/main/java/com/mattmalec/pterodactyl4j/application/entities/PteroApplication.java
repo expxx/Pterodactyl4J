@@ -552,6 +552,9 @@ public interface PteroApplication {
 	 *
 	 * @return {@link com.mattmalec.pterodactyl4j.PteroAction PteroAction} - Type {@link java.util.List List} of {@link com.mattmalec.pterodactyl4j.application.entities.ApplicationServer ApplicationServers}
 	 */
+
+	PteroAction<ApplicationServer> retrieveServerByExternalId(String id);
+
 	PteroAction<List<ApplicationServer>> retrieveServersByName(String name, boolean caseSensitive);
 
 	/**

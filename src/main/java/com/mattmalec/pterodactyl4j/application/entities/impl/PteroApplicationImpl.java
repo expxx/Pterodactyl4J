@@ -277,6 +277,15 @@ public class PteroApplicationImpl implements PteroApplication {
 	}
 
 	@Override
+	public PteroAction<ApplicationServer> retrieveServerByExternalId(String id) {
+		return PteroActionImpl.onRequestExecute(
+				api,
+				Route.Servers.GET_SERVER_EXTERNAL.compile(id),
+				(response, request) -> new ApplicationServerImpl(this, response.getObject())
+		);
+	}
+
+	@Override
 	public PteroAction<ApplicationServer> retrieveServerById(String id) {
 		return PteroActionImpl.onRequestExecute(
 				api,
